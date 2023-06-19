@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Kumbh Sans", serif;
+}
+
+body {
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  display: flex;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  height: 509px;
+  width: 920px;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-gap: 6rem;
+  background-image: url(/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 1260% 65%;
+}
+
+.img-wrapper-container {
+  background: url(/images/illustration-woman-online-desktop.svg);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 120% center;
+}
+
+.img-wrapper {
+  position: relative;
+}
+
+.box {
+  position: absolute;
+  top: 41%;
+  left: -23%;
+}
+
+.txt-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.title {
+  margin-bottom: 1.25rem;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 100%;
+}
+
+.active h3 {
+  font-weight: 700;
+  color: black;
+}
+
+.active img {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in;
+}
+
+.title-question {
+  color: hsl(237, 12%, 33%);
+  font-size: 14px;
+  font-weight: 400;
+  margin: 1.4rem 0rem;
+}
+
+.title-question:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+.answer {
+  padding-bottom: 1.3rem;
+  text-align: left;
+  color: hsl(240, 6%, 50%);
+  font-size: 12px;
+  line-height: 1.5;
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.question-answer__accordion {
+  width: 20rem;
+  border-bottom: 1px solid #e8e8ea;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(0, 0%, 0%);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.attribution a {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 21rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-gap: 0.5rem;
+    position: relative;
+    padding: 1rem;
+    height: 530px;
+  }
+
+  .img-wrapper {
+    background: url("./images/bg-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center 200%;
+  }
+
+  .img-wrapper-container {
+    position: absolute;
+    width: 21.25rem;
+    height: 12.5rem;
+    background-size: 70%;
+    background-position: center;
+    top: -129%;
+  }
+
+  .box {
+    width: 6rem;
+    position: absolute;
+    left: 13%;
+    top: -53%;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .txt-wrapper {
+    margin-top: 10px;
+  }
+
+  .question-accordion {
+    padding: 0.6rem;
+  }
+}
